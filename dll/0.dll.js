@@ -1,0 +1,50 @@
+webpackJsonp_name_([0],{
+
+/***/ "./src/app/features/lazy/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LazyModule\", function() { return LazyModule; });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(\"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(\"./node_modules/@angular/core/esm5/core.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(\"./node_modules/@angular/common/esm5/common.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(\"./node_modules/@angular/router/esm5/router.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngrx_store__ = __webpack_require__(\"./node_modules/@ngrx/store/@ngrx/store.es5.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__lazy_routing__ = __webpack_require__(\"./src/app/features/lazy/lazy.routing.ts\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__lazy_component__ = __webpack_require__(\"./src/app/features/lazy/lazy.component.ts\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__lazy_reducer__ = __webpack_require__(\"./src/app/features/lazy/lazy.reducer.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar LazyModule = /** @class */ (function () {\r\n    function LazyModule() {\r\n    }\r\n    LazyModule = __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__decorate\"]([\r\n        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__[\"NgModule\"])({\r\n            imports: [\r\n                __WEBPACK_IMPORTED_MODULE_2__angular_common__[\"CommonModule\"],\r\n                __WEBPACK_IMPORTED_MODULE_3__angular_router__[\"RouterModule\"].forChild(__WEBPACK_IMPORTED_MODULE_5__lazy_routing__[\"a\" /* routes */]),\r\n                __WEBPACK_IMPORTED_MODULE_4__ngrx_store__[\"StoreModule\"].forFeature('lazyModule', {\r\n                    lazy: __WEBPACK_IMPORTED_MODULE_7__lazy_reducer__[\"a\" /* lazyReducer */]\r\n                })\r\n            ],\r\n            declarations: [\r\n                __WEBPACK_IMPORTED_MODULE_6__lazy_component__[\"a\" /* LazyComponent */]\r\n            ],\r\n            providers: []\r\n        })\r\n    ], LazyModule);\r\n    return LazyModule;\r\n}());\r\n\r\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/index.ts\n// module id = ./src/app/features/lazy/index.ts\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/index.ts?");
+
+/***/ }),
+
+/***/ "./src/app/features/lazy/lazy.actions.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return LazyActionTypes; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return Decrement; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return Increment; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"d\", function() { return Reset; });\nvar LazyActionTypes;\r\n(function (LazyActionTypes) {\r\n    LazyActionTypes[\"Decrement\"] = \"[Lazy] Decrement\";\r\n    LazyActionTypes[\"Increment\"] = \"[Lazy] Increment\";\r\n    LazyActionTypes[\"Reset\"] = \"[Lazy] Reset\";\r\n})(LazyActionTypes || (LazyActionTypes = {}));\r\nvar Decrement = /** @class */ (function () {\r\n    function Decrement() {\r\n        this.type = LazyActionTypes.Decrement;\r\n    }\r\n    return Decrement;\r\n}());\r\n\r\nvar Increment = /** @class */ (function () {\r\n    function Increment() {\r\n        this.type = LazyActionTypes.Increment;\r\n    }\r\n    return Increment;\r\n}());\r\n\r\nvar Reset = /** @class */ (function () {\r\n    function Reset() {\r\n        this.type = LazyActionTypes.Reset;\r\n    }\r\n    return Reset;\r\n}());\r\n\r\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/lazy.actions.ts\n// module id = ./src/app/features/lazy/lazy.actions.ts\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/lazy.actions.ts?");
+
+/***/ }),
+
+/***/ "./src/app/features/lazy/lazy.component.html":
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<header>\\n  <h5>\\n    This module is being loaded lazily.\\n\\n\\t\\t<div>Current Count: {{ counter | async }}</div>\\n    <button (click)=\\\"increment()\\\">Increment</button>\\n\\t\\t<button (click)=\\\"decrement()\\\">Decrement</button>\\n\\t\\t<button (click)=\\\"reset()\\\">Reset Counter</button>\\n  </h5>\\n</header>\"\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/lazy.component.html\n// module id = ./src/app/features/lazy/lazy.component.html\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/lazy.component.html?");
+
+/***/ }),
+
+/***/ "./src/app/features/lazy/lazy.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return LazyComponent; });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(\"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(\"./node_modules/@angular/core/esm5/core.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngrx_store__ = __webpack_require__(\"./node_modules/@ngrx/store/@ngrx/store.es5.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lazy_actions__ = __webpack_require__(\"./src/app/features/lazy/lazy.actions.ts\");\n\r\n\r\n\r\n\r\nvar LazyComponent = /** @class */ (function () {\r\n    function LazyComponent(store) {\r\n        this.store = store;\r\n        this.counter = store.select(function (s) { return s.lazyModule.lazy.counter; });\r\n    }\r\n    LazyComponent.prototype.decrement = function () {\r\n        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__lazy_actions__[\"a\" /* Decrement */]());\r\n    };\r\n    LazyComponent.prototype.increment = function () {\r\n        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__lazy_actions__[\"b\" /* Increment */]());\r\n    };\r\n    LazyComponent.prototype.reset = function () {\r\n        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__lazy_actions__[\"d\" /* Reset */]());\r\n    };\r\n    LazyComponent = __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__decorate\"]([\r\n        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__[\"Component\"])({\r\n            selector: 'my-lazy',\r\n            template: __webpack_require__(\"./src/app/features/lazy/lazy.component.html\")\r\n        }),\r\n        __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__metadata\"](\"design:paramtypes\", [__WEBPACK_IMPORTED_MODULE_2__ngrx_store__[\"Store\"]])\r\n    ], LazyComponent);\r\n    return LazyComponent;\r\n}());\r\n\r\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/lazy.component.ts\n// module id = ./src/app/features/lazy/lazy.component.ts\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/lazy.component.ts?");
+
+/***/ }),
+
+/***/ "./src/app/features/lazy/lazy.reducer.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("/* harmony export (immutable) */ __webpack_exports__[\"a\"] = lazyReducer;\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(\"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lazy_actions__ = __webpack_require__(\"./src/app/features/lazy/lazy.actions.ts\");\n\r\n\r\nvar initialState = {\r\n    counter: 0\r\n};\r\nfunction lazyReducer(state, action) {\r\n    if (state === void 0) { state = initialState; }\r\n    switch (action.type) {\r\n        case __WEBPACK_IMPORTED_MODULE_1__lazy_actions__[\"c\" /* LazyActionTypes */].Decrement:\r\n            return __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__assign\"]({}, state, { counter: state.counter - 1 });\r\n        case __WEBPACK_IMPORTED_MODULE_1__lazy_actions__[\"c\" /* LazyActionTypes */].Increment:\r\n            return __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__assign\"]({}, state, { counter: state.counter + 1 });\r\n        case __WEBPACK_IMPORTED_MODULE_1__lazy_actions__[\"c\" /* LazyActionTypes */].Reset:\r\n            return __WEBPACK_IMPORTED_MODULE_0_tslib__[\"__assign\"]({}, state, { counter: 0 });\r\n        default:\r\n            return state;\r\n    }\r\n}\r\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/lazy.reducer.ts\n// module id = ./src/app/features/lazy/lazy.reducer.ts\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/lazy.reducer.ts?");
+
+/***/ }),
+
+/***/ "./src/app/features/lazy/lazy.routing.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return routes; });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_component__ = __webpack_require__(\"./src/app/features/lazy/lazy.component.ts\");\n\r\nvar routes = [\r\n    {\r\n        path: '',\r\n        component: __WEBPACK_IMPORTED_MODULE_0__lazy_component__[\"a\" /* LazyComponent */]\r\n    }\r\n];\r\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app/features/lazy/lazy.routing.ts\n// module id = ./src/app/features/lazy/lazy.routing.ts\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/app/features/lazy/lazy.routing.ts?");
+
+/***/ })
+
+});
